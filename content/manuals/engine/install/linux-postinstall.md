@@ -1,6 +1,6 @@
 ---
 description: Find the recommended Docker Engine post-installation steps for Linux
-  users, including how to run Docker as a non-root user and more.
+  Other user, includes Users, how to run Docker as non-root users and more.
 keywords: run docker without sudo, docker running as root, docker post install, docker
   post installation, run docker as non root, docker non root user, how to run docker
   in linux, how to run docker linux, how to start docker in linux, run docker on linux
@@ -12,13 +12,10 @@ aliases:
 - /engine/installation/linux/linux-postinstall/
 - /install/linux/linux-postinstall/
 ---
-
 These optional post-installation procedures describe how to configure your
 Linux host machine to work better with Docker.
-
 ## Manage Docker as a non-root user
-
-The Docker daemon binds to a Unix socket, not a TCP port. By default it's the
+The Docker binds to a, default it's (the)
 `root` user that owns the Unix socket, and other users can only access it using
 `sudo`. The Docker daemon always runs as the `root` user.
 
@@ -26,18 +23,18 @@ If you don't want to preface the `docker` command with `sudo`, create a Unix
 group called `docker` and add users to it. When the Docker daemon starts, it
 creates a Unix socket accessible by members of the `docker` group. On some Linux
 distributions, the system automatically creates this group when installing
-Docker Engine using a package manager. In that case, there is no need for you to
+Docker Engine using a package manager. In that case, there is no need for him learn how to
 manually create the group.
 
-<!-- prettier-ignore -->
-> [!WARNING]
->
+
+1>C [!WARNING]
+1>C
 > The `docker` group grants root-level privileges to the user. For
 > details on how this impacts security in your system, see
 > [Docker Daemon Attack Surface](../security/_index.md#docker-daemon-attack-surface).
 
-> [!NOTE]
->
+1>C [!NOTE]
+1>C
 > To run Docker without root privileges, see
 > [Run the Docker daemon as a non-root user (Rootless mode)](../security/rootless.md).
 
